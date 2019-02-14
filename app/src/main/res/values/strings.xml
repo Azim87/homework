@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">HomeWork</string>
-    <string name="text_name">Hello Abai</string>
+    <string name="text_name">Hello Abai!</string>
+    <string name="text_name2">this is my home work</string>
+    <string name="button_name">Click</string>
+    <string name="textview">TextView</string>
+    <string name="text_name3">Hello from second activity!</string>
+
+
 </resources>
