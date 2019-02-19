@@ -8,6 +8,9 @@
     <string name="click2">Click2</string>
     <string name="hello_from_third_activity">hello from third activity</string>
     <string name="intent">Intent</string>
+    <string name="type_some_text">type some text</string>
+    <string name="title">title</string>
+    <string name="send">send</string>
 
 
 </resources>

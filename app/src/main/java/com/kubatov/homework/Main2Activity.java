@@ -11,6 +11,7 @@ import java.security.PublicKey;
 public class Main2Activity extends AppCompatActivity {
 
     TextView textView;
+    TextView textView1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,9 @@ public class Main2Activity extends AppCompatActivity {
         textView.setText(text);
 
 
+        Intent intent1 = getIntent();
+        String text1 = intent1.getStringExtra("TEXT");
+        textView1.setText(text1);
 
     }
 
