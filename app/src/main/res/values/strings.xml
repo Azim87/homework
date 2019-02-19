@@ -11,6 +11,8 @@
     <string name="type_some_text">type some text</string>
     <string name="title">title</string>
     <string name="send">send</string>
+    <string name="calculate">Calculate!</string>
+    <string name="type_some_digits">type some digits</string>
 
 
 </resources>

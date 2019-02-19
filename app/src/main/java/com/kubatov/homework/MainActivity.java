@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     Button clickBtn2;
     Button sendText;
     EditText editText;
+    TextView textView4;
 
     String title;
 
@@ -28,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
 
         initText();
         send();
+
+        textView4 = findViewById(R.id.textView_4);
+        Intent intent = getIntent();
+        int numb = (int) intent.getIntExtra("NUM", 1);
+        textView4.setText(numb);
 
         clickBtn = findViewById(R.id.firstButton);
         clickBtn2 = findViewById(R.id.secondButton);
