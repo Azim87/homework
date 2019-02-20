@@ -2,12 +2,22 @@ package com.kubatov.homework.models;
 
 public class Task  {
     public String title;
-    public String description;
     public int image;
+    public String description;
 
-    public Task(String t, String d, int iU){
+    public Task(String t, int iU, String d){
         this.title = t;
-        this.description = d;
         this.image = iU;
+        this.description = d;
+
+
+
+
+
+
+
     }
+
+
+
 }
