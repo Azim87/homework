@@ -8,15 +8,23 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.kubatov.homework.R;
+import com.kubatov.homework.models.Task;
 import com.kubatov.homework.viewholders.TaskViewHolders;
 
+import java.util.List;
+
 public class TaskAdapter extends RecyclerView.Adapter<TaskViewHolders> {
+
+    private List<Task> taskList;
+
+    public TaskAdapter(List<Task> list){
+        taskList = list;
+    }
 
     @NonNull
     @Override
     public TaskViewHolders onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.view_holder_task, viewGroup, false);
-        Log.d("222", "create = " + i);
 
         TaskViewHolders vh = new TaskViewHolders(v);
         return vh;
@@ -24,13 +32,13 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskViewHolders> {
 
     @Override
     public void onBindViewHolder(@NonNull TaskViewHolders taskViewHolders, int i) {
-    taskViewHolders.onBind("OLOLOLOLO");
-        Log.d("222", "bind = " + i);
+    taskViewHolders.onBind(taskList.get(i));
 
     }
 
     @Override
     public int getItemCount() {
-        return 10;
+        return taskList.size();
     }
+
 }

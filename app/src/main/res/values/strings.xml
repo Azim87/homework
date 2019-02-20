@@ -13,6 +13,7 @@
     <string name="send">send</string>
     <string name="calculate">Calculate!</string>
     <string name="type_some_digits">type some digits</string>
+    <string name="todo">TODO</string>
 
 
 </resources>
