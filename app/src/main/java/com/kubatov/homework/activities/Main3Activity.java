@@ -1,4 +1,4 @@
-package com.kubatov.homework;
+package com.kubatov.homework.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,14 +9,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.kubatov.homework.R;
+
 public class Main3Activity extends AppCompatActivity {
 
     EditText editText;
     Button button;
-
-    int number;
-    int a;
-    int b;
+    int result;
+    String number;
+    String a;
+    String b;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,9 +29,11 @@ public class Main3Activity extends AppCompatActivity {
         initSendButton();
     }
 
+
     public void initEditText(){
         editText = findViewById(R.id.edit_text);
         editText.addTextChangedListener(new TextWatcher() {
+
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -37,12 +41,18 @@ public class Main3Activity extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                number = a * b;
+                try {
+
+
+                    result = Integer.parseInt(number);
+                    int d = Integer.parseInt(a);
+                    int g = Integer.parseInt(b);
+                    result = d + g;
+                }catch (Exception e){}
             }
 
             @Override
             public void afterTextChanged(Editable s) {
-
             }
         });
     }
@@ -53,7 +63,7 @@ public class Main3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Main3Activity.this, MainActivity.class);
-                intent.putExtra("NUM", number);
+                intent.putExtra("NUM", result);
                 startActivityForResult(intent, 3);
             }
         });

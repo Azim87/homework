@@ -1,4 +1,4 @@
-package com.kubatov.homework;
+package com.kubatov.homework.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import java.security.PublicKey;
+import com.kubatov.homework.R;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -37,8 +37,5 @@ public class Main2Activity extends AppCompatActivity {
         finish();
     }
 
-    public void onTextClick1(View v){
 
-
-    }
 }

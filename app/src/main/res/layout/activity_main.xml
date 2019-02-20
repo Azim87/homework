@@ -1,43 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".activities.MainActivity">
+
+<android.support.v7.widget.RecyclerView
+
+    android:id="@+id/tasks_recycler"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"/>
 
 
-    <Button
-        android:id="@+id/firstButton"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:text="@string/button_name" />
-
-    <Button
-        android:id="@+id/secondButton"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:text="@string/click2"
-        android:onClick="onHideClick"/>
-
-
-    <EditText
-        android:id="@+id/title_name"
-        android:layout_width="170dp"
-        android:layout_height="40dp"
-        android:hint="@string/type_some_text"
-        android:inputType="text" />
-
-    <Button
-        android:id="@+id/send_button"
-        android:layout_width="70dp"
-        android:layout_height="wrap_content"
-        android:text="@string/send"/>
-
-    <TextView
-        android:id="@+id/textView_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-
-</android.support.v7.widget.LinearLayoutCompat>
+</LinearLayout>
