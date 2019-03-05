@@ -1,44 +1,41 @@
 package com.kubatov.homework.viewholders;
 
-import android.app.LauncherActivity;
-import android.content.Context;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.kubatov.homework.R;
+import com.kubatov.homework.interfaces.IOnClickListener;
 import com.kubatov.homework.models.Task;
-import com.squareup.picasso.Picasso;
+
 
 
 public class TaskViewHolders extends RecyclerView.ViewHolder {
 
+    private TextView title;
+    private TextView description;
+    private IOnClickListener mListener;
+    private int taskId;
 
-    private TextView textView;
-    private TextView textView2;
-    private ImageView imageView;
-
-    public TaskViewHolders(@NonNull View itemView){
+    public TaskViewHolders(@NonNull View itemView, IOnClickListener listener){
         super(itemView);
+        mListener = listener;
+        title = itemView.findViewById(R.id.vh_task_title);
+        description = itemView.findViewById(R.id.vh_task_description);
 
-        textView = itemView.findViewById(R.id.vh_task_title);
-        textView2 = itemView.findViewById(R.id.vh_task_description);
-        imageView = itemView.findViewById(R.id.vh_task_image);
-
-        Picasso.get().load("http://i.imgur.com/DvpvklR.png").into(imageView);
-
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.clickOn(taskId);
+            }
+        });
 
     }
 
     public void onBind(Task task){
-        textView.setText(task.title);
-        textView2.setText(task.description);
-
-
-
+        taskId = task.id;
+        title.setText(task.title);
+        description.setText(task.description);
 
     }
 }

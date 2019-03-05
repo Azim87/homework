@@ -1,35 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".activities.Main2Activity">
 
 
-    <TextView
-        android:id="@+id/textView_2"
+    <fragment
+        android:id="@+id/tv1"
+        android:name="com.kubatov.homework.Fragments.textviewFr.TextFragment1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_textview1" />
+
+    <fragment
+        android:id="@+id/et1"
+        android:name="com.kubatov.homework.Fragments.edittextFr.EditTextFragment1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_edittext1" />
+
+    <fragment
+        android:id="@+id/tv2"
+        android:name="com.kubatov.homework.Fragments.textviewFr.TextFragment2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_textview2" />
+
+    <fragment
+        android:id="@+id/et2"
+        android:name="com.kubatov.homework.Fragments.edittextFr.EditTextFragment2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_edittext2" />
+
+    <fragment
+        android:id="@+id/tv3"
+        android:name="com.kubatov.homework.Fragments.textviewFr.TextFragment3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_textview3" />
+
+    <fragment
+        android:id="@+id/et3"
+        android:name="com.kubatov.homework.Fragments.edittextFr.EditTextFragment3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/fragment_edittext3" />
+
+
+    <fragment
+        android:id="@+id/fragment_button2"
+        android:name="com.kubatov.homework.Fragments.buttonFr.ButtonFragment2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onTextClick"
-        android:text="@string/intent"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.112" />
-
-    <TextView
-        android:id="@+id/textView_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-
-
-</android.support.constraint.ConstraintLayout>
+        tools:layout="@layout/fragment_button2" />
+</LinearLayout>

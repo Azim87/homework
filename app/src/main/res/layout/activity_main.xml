@@ -4,13 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical"
     tools:context=".activities.MainActivity">
 
-<android.support.v7.widget.RecyclerView
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="1" />
 
-    android:id="@+id/tasks_recycler"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/tasks_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="18" />
+
+
+    <fragment
+        android:id="@+id/fragment_button"
+        android:name="com.kubatov.homework.Fragments.buttonFr.ButtonFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:layout="@layout/fragment_button" />
 
 
 </LinearLayout>

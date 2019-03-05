@@ -1,23 +1,19 @@
 package com.kubatov.homework.models;
 
-public class Task  {
+import java.io.Serializable;
+
+public class Task implements Serializable {
+
+    public int id = -1;
     public String title;
-    public int image;
+    public String image;
     public String description;
 
-    public Task(String t, int iU, String d){
-        this.title = t;
-        this.image = iU;
-        this.description = d;
-
-
-
-
-
-
-
+    public Task(int id, String title, String image, String description){
+        this.id = id;
+        this.title = title;
+        this.image = image;
+        this.description = description;
     }
-
-
 
 }
